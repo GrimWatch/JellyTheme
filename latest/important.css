@@ -4,11 +4,12 @@
   -webkit-filter:none!important;
   box-shadow:0 0 20px #000;
   filter:none!important;
-  transform:scale(1.2)!important
+  transform:scale(1.2)!important;
+  z-index: 1500;
   }
   
   .homeLibraryButton,.card:hover,.card:focus {
-  background-color:#101010!important
+  background-color:#1010105e!important
   }
   
   .card {
