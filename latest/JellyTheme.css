@@ -2180,24 +2180,6 @@ font-size:100%!important
     font-size: 1em !important
 }
 
-.layout-tv .detailSection {
-background-color:#000000de;
-border-radius:105px;
-margin-left:-30vw;
-margin-top:-50vh;
-padding:10vh 2vw 2vh 30vw;
-width:44vw!important;
-}
-
-.layout-desktop .detailSection {
-background-color:#000000de;
-border-radius:105px;
-margin-left:-30vw;
-margin-top:-10vh;
-padding:10vh 2vw 2vh 30vw;
-width:44vw!important
-}
-
 .progressring-spiner {
 border-color:#b1b1b1
 }
@@ -2342,11 +2324,6 @@ font-size:74%;
 
 .layout-mobile .backgroundContainer {
 background-color:#00000000!important;
-}
-
-.layout-mobile .detailSectionContent a {
-color:var(--accent);
-font-size:80%;
 }
 
 .layout-mobile p#seriesAirTime {
