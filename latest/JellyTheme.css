@@ -47,24 +47,6 @@ overflow-y:auto
 .layout-tv .paper-icon-button-light::after,
 .layout-tv .listItem::after,
 .layout-tv .raised::after,
-.layout-tv #itemDetailPage .emby-button::after {
-  box-sizing: border-box;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  border: 4px solid var(--accent);
-  transform: translateY(100%);
-  visibility: hidden;
-  z-index: 1000;
-  will-change: transform;
-  transition: all 0.275s;
-  border-radius: 10px;
-}
 
 .layout-tv .raised::after {
   transition: transform 0.275s, visiblity 0s 0.275s;
@@ -81,18 +63,11 @@ overflow-y:auto
 .layout-tv .listItem:focus::after,
 .layout-tv a.show-focus[is="emby-linkbutton"]:focus > .listItem::after,
 .layout-tv .raised:focus::after,
-.layout-tv #itemDetailPage .emby-button:focus::after {
-  transform: translateX(0) !important;
-  visibility: visible;
-}
 
 .layout-tv .card:focus ~ .card::before,
 .layout-tv .emby-tab-button:focus ~ .emby-tab-button::before,
 .layout-tv .paper-icon-button-light:focus ~ .paper-icon-button-light::after,
 .layout-tv .raised:focus ~ .raised::after,
-.layout-tv #itemDetailPage .emby-button:focus ~ .emby-button::after {
-  transform: translateX(-100%) !important;
-}
 
 .layout-tv .verticalSection:focus-within ~ .verticalSection .card::before,
 .layout-tv .verticalSection:focus-within ~ .section5 .card::before,
@@ -109,9 +84,6 @@ overflow-y:auto
 .layout-tv *:focus-within > .emby-tab-button::before,
 .layout-tv *:focus-within > .paper-icon-button-light::after,
 .layout-tv *:focus-within > .raised::after,
-.layout-tv #itemDetailPage *:focus-within > .emby-button::after {
-  transform: translateX(100%);
-}
 
 .layout-tv .emby-tab-button:focus,
 .layout-tv .paper-icon-button-light:focus,
@@ -165,11 +137,6 @@ height:-webkit-fit-content;
 height:-moz-fit-content;
 height:fit-content;
 top:.9em
-}
-
-#itemDetailPage
-button.cardImageContainer.coveredImage.cardContent.itemAction.lazy.blurhashed.lazy-image-fadein-fast {
-border-radius:var(--rounding)
 }
 
 #indexPage
@@ -329,18 +296,6 @@ font-size:6.5vw
     bottom: -50px !important;
 }
 
-#itemDetailPage .detailVerticalSection:last-child {
-margin-bottom:10vh
-}
-
-#itemDetailPage .itemExternalLinks {
-margin-top:0!important
-}
-
-.layout-mobile #itemDetailPage .detailVerticalSection {
-width:100%;
-}
-
 .layout-mobile .nextUpSection {
     margin-top: -72vh !important;
     margin-bottom: 62vh !important;
@@ -445,7 +400,7 @@ height:2.5em
 }
 }
 
-.cardContent-button,.cardContent-shadow,.itemDetailImage,.cardOverlayButton-hover,.cardOverlayContainer,.cardImageContainer,.cardPadder,.listItemImage,.listItemImageButton,.listItemButton,.headerButton,.paper-icon-button-light,.innerCardFooter,.blurhash-canvas,.actionSheetMenuItem:hover,.dialog,.countIndicator,.playedIndicator,.listItem-border {
+.cardContent-button,.cardContent-shadow,.cardOverlayButton-hover,.cardOverlayContainer,.cardImageContainer,.cardPadder,.listItemImage,.listItemImageButton,.listItemButton,.headerButton,.paper-icon-button-light,.innerCardFooter,.blurhash-canvas,.actionSheetMenuItem:hover,.dialog,.countIndicator,.playedIndicator,.listItem-border {
 border-radius:6px!important
 }
 
@@ -515,66 +470,6 @@ font-size:5vw;
 margin:0 5vw;
 position:static;
 width:calc(100vw - 10vw)
-}
-
-.layout-mobile #itemDetailPage .btnPlay,.layout-mobile #itemDetailPage .btnResume {
-background:var(--accent)!important;
-flex-flow:row;
-flex-shrink:0;
-font-size:150%;
-grid-gap:5%!important;
-justify-content:flex-start;
-padding:10px!important;
-text-shadow:none;
-width:100%!important
-}
-
-.layout-mobile #itemDetailPage .btnPlay::after {
-content:"Play"
-}
-
-.layout-mobile #itemDetailPage .btnResume::after {
-content:"Resume"
-}
-
-.layout-mobile #itemDetailPage .btnDownload::after {
-content:"Download"
-}
-
-.layout-mobile #itemDetailPage .btnPlayTrailer::after {
-content:"Trailer"
-}
-
-.layout-mobile #itemDetailPage .btnInstantMix::after {
-content:"Mix"
-}
-
-.layout-mobile #itemDetailPage .btnShuffle::after {
-content:"Shuffle"
-}
-
-.layout-mobile #itemDetailPage .btnCancelSeriesTimer::after {
-content:"Cancel Series"
-}
-
-.layout-mobile #itemDetailPage .btnCancelTimer::after {
-content:"Stop Recording"
-}
-
-.layout-mobile #itemDetailPage .btnPlaystate::after {
-content:"Watched"
-}
-
-.layout-mobile #itemDetailPage .btnUserRating::after {
-content:"Favorite"
-}
-
-.layout-mobile #itemDetailPage .btnSplitVersions::after {
-content:"Split"
-}
-
-.layout-mobile #itemDetailPage .btnMoreCommands::after {
-content:"More"
 }
 
 .layout-mobile .primaryImageWrapper > img {
@@ -817,7 +712,7 @@ border-bottom-right-radius:var(--rounding)
 border-radius:var(--rounding)!important
 }
 
-.toast,.paperList,.cardContent,.sessionNowPlayingInnerContent,.cardImage,.fab,.multiSelectCheckboxOutline,.itemSelectionPanel,.cardContent-button,.cardContent-shadow,.itemDetailImage,.cardImageContainer,.cardPadder,.listItemButton,.headerButton,.paper-icon-button-light,.innerCardFooter,.blurhash-canvas,.actionSheetMenuItem:hover,.dialog,.listItemIcon,.listItem-border,.button-flat,.visualCardBox,.checkboxOutline,.emby-select-withcolor,.chapterThumbTextContainer,.chapterThumbContainer,.chapterThumb,.emby-input,.emby-textarea,.emby-select-withcolor,.cardOverlayButtonIcon,.subtitleappearance-preview.flex.align-items-center.justify-content-center {
+.toast,.paperList,.cardContent,.sessionNowPlayingInnerContent,.cardImage,.fab,.multiSelectCheckboxOutline,.itemSelectionPanel,.cardContent-button,.cardContent-shadow,.cardImageContainer,.cardPadder,.listItemButton,.headerButton,.paper-icon-button-light,.innerCardFooter,.blurhash-canvas,.actionSheetMenuItem:hover,.dialog,.listItemIcon,.listItem-border,.button-flat,.visualCardBox,.checkboxOutline,.emby-select-withcolor,.chapterThumbTextContainer,.chapterThumbContainer,.chapterThumb,.emby-input,.emby-textarea,.emby-select-withcolor,.cardOverlayButtonIcon,.subtitleappearance-preview.flex.align-items-center.justify-content-center {
 border-radius:var(--rounding)!important
 }
 
@@ -834,7 +729,7 @@ border-radius:var(--rounding)
 border-radius:var(--rounding)
 }
 
-.cardContent-button,.cardContent-shadow,.itemDetailImage,.cardOverlayButton-hover,.cardOverlayContainer,.cardPadder,.listItemButton,.headerButton,.paper-icon-button-light,.innerCardFooter,.blurhash-canvas,.actionSheetMenuItem:hover,.dialog {
+.cardContent-button,.cardContent-shadow,.cardOverlayButton-hover,.cardOverlayContainer,.cardPadder,.listItemButton,.headerButton,.paper-icon-button-light,.innerCardFooter,.blurhash-canvas,.actionSheetMenuItem:hover,.dialog {
 border-radius:var(--rounding)!important
 }
 
@@ -1140,9 +1035,7 @@ width:calc(100% - 12px)
 margin:0!important
 }
 
-.homeLibraryButton:not(:hover),.card:not(:hover) {
-z-index:5
-}
+t
 
 .overflowSquareCard .cardImageContainer::before {
 -webkit-filter:brightness(40%) blur(10px);
@@ -1230,10 +1123,6 @@ padding-right:0!important;
 text-shadow:none
 }
 
-.layout-mobile #itemDetailPage .sectionTitle {
-padding-left:5%
-}
-
 .layout-mobile .detailPagePrimaryContent {
 height:-webkit-fit-content!important;
 height:-moz-fit-content!important;
@@ -1245,29 +1134,6 @@ padding:0 5%!important;
 width:calc(100vw - 10%)!important
 }
 
-.layout-tv #itemDetailPage:not(.noBackdrop) .detailPagePrimaryContainer,.layout-desktop #itemDetailPage:not(.noBackdrop) .detailPagePrimaryContainer {
-background:transparent;
-font-size:20px;
-font-size:135%;
-height:20vh;
-margin-top:10vh;
-max-width:95%;
-padding:0!important;
-position:relative;
-top:0;
-width:-webkit-fit-content!important;
-width:-moz-fit-content!important;
-width:fit-content!important
-}
-
-.layout-tv #itemDetailPage:not(.noBackdrop) .detailPagePrimaryContainer {
-height:-webkit-fit-content;
-height:-moz-fit-content;
-height:fit-content;
-margin-top:-28vh;
-height: 80vh;
-width:95vw!important;
-}
 
 .layout-tv h3.itemName.infoText.subtitle {
     font-size: 68px;
@@ -1468,7 +1334,7 @@ background-color:#141414!important;
 z-index:-6
 }
 
-.cardContent-button,.cardContent-shadow,.itemDetailImage,.cardOverlayContainer,.cardPadder,.listItemImage,.listItemImageButton,.listItemButton,.headerButton,.paper-icon-button-light,.innerCardFooter,.blurhash-canvas,.actionSheetMenuItem:hover,.dialog {
+.cardContent-button,.cardContent-shadow,.cardOverlayContainer,.cardPadder,.listItemImage,.listItemImageButton,.listItemButton,.headerButton,.paper-icon-button-light,.innerCardFooter,.blurhash-canvas,.actionSheetMenuItem:hover,.dialog {
 border-radius:var(--rounding)!important
 }
 
@@ -1597,48 +1463,17 @@ display:none!important
 padding-left:5px
 }
 
-#itemDetailPage .vertical-list {
--webkit-box-orient:horizontal;
-display:grid;
-grid-template-columns:repeat(5,1fr);
-height:-webkit-fit-content;
-height:-moz-fit-content;
-height:fit-content;
-justify-content:space-evenly;
-margin:-6px;
-padding:0;
-width:100%
-}
-
-#itemDetailPage .emby-select {
-box-shadow:none!important
-}
-
 .listItemImage-large-tv {
 height:31vh;
 width:100%
 }
 
-.layout-tv #itemDetailPage .itemName.infoText.parentNameLast {
-display:block !important;
-}
 
 .listItem-withContentWrapper:hover
 .listItemImageButton.itemAction.paper-icon-button-light {
 opacity:100%
 }
 
-@media (max-width: 1291px) {
-#itemDetailPage .vertical-list {
-grid-template-columns:repeat(3,1fr)
-}
-}
-
-@media (max-width: 991px) {
-#itemDetailPage .vertical-list {
-grid-template-columns:repeat(2,1fr)
-}
-}
 
 .listItem-withContentWrapper {
 -moz-border-radius:var(--rounding);
@@ -1704,11 +1539,6 @@ position:absolute;
 right:-.5px
 }
 
-.layout-mobile #itemDetailPage .vertical-list {
-grid-template-columns:100%;
-margin:0 auto!important;
-width:90vw
-}
 
 .listItemIndicators {
 right:0;
@@ -1758,9 +1588,7 @@ height:3rem
 background:var(--deftraback)!important
 }
 
-#itemDetailPage::-webkit-scrollbar-track-piece {
-background:#141414
-}
+
 
 .listItemImageButton.itemAction.paper-icon-button-light {
 color:var(--accent);
@@ -1920,22 +1748,6 @@ float:left
 float:right
 }
 
-#itemDetailPage .detailLogo {
-background-position:0!important;
-display:block!important;
-flex-shrink:0;
-height:20vh;
-margin-left:5vw;
-margin-top:10vh;
-max-width:35vw;
-position:static;
-width:auto
-}
-
-div#itemDetailPage {
-display:flex;
-flex-direction:column
-}
 
 .detailPagePrimaryContent {
 min-height:60vh!important
@@ -1963,11 +1775,7 @@ width:-moz-fit-content!important;
 width:fit-content!important
 }
 
-.layout-desktop #itemDetailPage:not(.noBackdrop) .detailPagePrimaryContainer,.layout-tv #itemDetailPage:not(.noBackdrop) .detailPagePrimaryContainer {
-height:10vh;
-margin:0;
-padding:0
-}
+
 
 :not(.hide) + .detailPageWrapperContainer .parentName,:not(.hide) + .detailPageWrapperContainer .parentNameLast,:not(.hide) + .detailPageWrapperContainer .parentName > *,:not(.hide) + .detailPageWrapperContainer .parentNameLast > * {
 background:transparent;
@@ -2004,10 +1812,6 @@ width:35vw
 
 
 
-.layout-mobile #itemDetailPage .parentName,.layout-mobile #itemDetailPage .parentNameLast {
-display:block
-}
-
 .hide + .detailPageWrapperContainer .parentName,.hide + .detailPageWrapperContainer .parentNameLast {
 display:block!important
 }
@@ -2024,15 +1828,6 @@ font-size:1em
 font-size:1em
 }
 
-.layout-mobile #itemDetailPage .itemName.infoText.parentNameLast {
-display:block;
-font-size:10.5vw;
-height:-webkit-fit-content;
-height:-moz-fit-content;
-height:fit-content;
-position:static;
-width:calc(100% - 10vw)
-}
 
 
 .withSectionTabs .backdropImage {
@@ -2047,14 +1842,6 @@ filter:blur(18px) saturate(120%) contrast(120%) brightness(60%)
     linear-gradient(to top, transparent , black 100%);
 }
 
-
-div#itemDetailPage {
-background:#00000000
-}
-
-.layout-desktop div#itemDetailPage {
-    margin-top: 2vh !important;
-}
 
 .layout-desktop .collectionItems {
 margin-top:-30%
@@ -2090,16 +1877,8 @@ padding-right:30vw
 width:100%
 }
 
-#itemDetailPage .detailLogo {
-margin-top:3vh!important;
-z-index:1!important
-}
 
-.layout-desktop .itemDetailsGroup {
-font-size:large!important;
-max-width: 23vw;
-margin-bottom: 6%;
-}
+
 
 .layout-desktop .moreFromSeasonSection {
 margin-top:3vh!important
@@ -2140,9 +1919,6 @@ transition:.2s
 display:block !important;
 }
 
-.itemDetailPage.backdropContainer {
-z-index:-3!important
-}
 
 .itemSelectionPanel {
 border:1px solid #ffffff7d
@@ -2208,15 +1984,6 @@ display:none
 opacity:1
 }
 
-.layout-tv #itemDetailPage:not(.noBackdrop) .detailPagePrimaryContainer {
-height:80vh;
-margin-top: -30vh;
-}
-
-.layout-tv #itemDetailPage .detailLogo {
-margin-top: 10px !important;
-}
-
 .layout-tv .infoText {
 margin-top: 0em!important;
 }
@@ -2239,12 +2006,6 @@ color:#fff!important
 .itemsContainer-tv>.portraitCard {
     width: calc(12.5% - 10px) !important;
 }
-.layout-tv .itemDetailsGroup {
-    font-size: 1vw;
-    margin-top: -5vh;
-    max-width: 23vw;
-    margin-bottom: 6%;
-}
 
 .layout-tv h3.tagline {
     font-size: 1.9pc;
@@ -2263,10 +2024,6 @@ color:#fff!important
 .layout-tv .listItemImage-large-tv {
     height: 23vh !important;
     width: 55% !important;
-}
-
-.layout-tv #itemDetailPage .vertical-list {
-    grid-template-columns: repeat(2,1fr);
 }
 
 .layout-tv .secondary.listItem-overview.listItemBodyText {
@@ -2310,10 +2067,6 @@ font-size:81%;
 min-height:6vh!important;
 }
 
-.layout-mobile .itemDetailsGroup {
-font-size:76%;
-}
-
 .layout-mobile .trackSelections {
 font-size:71%;
 }
@@ -2338,18 +2091,6 @@ width:50%;
 .layout-mobile .primaryImageWrapper > img {
 display:none!important;
 z-index:-3;
-}
-
-.layout-mobile #itemDetailPage .detailLogo {
-display:block!important;
-margin-bottom:-50%!important;
-margin-top:11%;
-min-width:80%!important;
-z-index:5!important;
-}
-
-.layout-mobile #itemDetailPage .itemName.infoText.parentNameLast {
-display:none!important;
 }
 
 .taskProgressInner {
@@ -2414,10 +2155,6 @@ display:none!important;
   object-fit:contain;
   mask-image: none !important;
   -webkit-mask-image: none !important;
-}
-
-.hide-scroll div#itemDetailPage {
-    display: none !important;
 }
 
 .layout-mobile .htmlvideoplayer {

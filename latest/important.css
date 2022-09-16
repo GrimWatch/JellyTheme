@@ -1,0 +1,143 @@
+/* card pop out */
+
+.homeLibraryButton:hover,.homeLibraryButton:focus,.card:hover,.card:focus {
+  -webkit-filter:none!important;
+  box-shadow:0 0 20px #000;
+  filter:none!important;
+  transform:scale(1.2)!important
+  }
+  
+  .homeLibraryButton,.card:hover,.card:focus {
+  background-color:#101010!important
+  }
+  
+  .card {
+  border-radius:var(--rounding);
+  transition: transform .2s;
+  z-index:100;
+  }
+  .cardBox {
+  background:transparent!important;
+  box-shadow:none;
+  overflow:hidden;
+  transition:all .15s
+  }
+  .overflowSquareCard .cardImageContainer::after {
+  background:inherit;
+  background-size:100%;
+  content:"";
+  height:100%;
+  position:absolute;
+  transition:all .15s;
+  width:100%;
+  z-index:0
+  }
+  
+  
+  .emby-tab-button.emby-tab-button-active::after {
+  transform:scale(1)
+  }
+  
+  
+  .cardOverlayContainer {
+      background-color: rgba(0,0,0,0.4);
+      border-radius: 5px 5px 0 0!important;
+  }
+  
+  
+  
+  
+  /*Shrink and square (or round) cast thumnails*/
+  #castContent .card.overflowPortraitCard {width: 4.2cm !important; font-size: 90% !important;}
+  .cardPadder {background-color: #0000 !important; box-shadow: none !important;}
+  
+  /*Correct image aspect ratio behaviour, set border-radius to zero for square tiles*/
+  #castContent .cardOverlayContainer.itemAction,
+  #castContent .cardImageContainer
+  {border-radius: 6px !important;}
+  #castContent .cardScalable {width:  3.8cm !important; height: 3.8cm !important;}
+  
+  
+  /*Make the red checkmark and likes blue like everything else*/
+  .playstatebutton-icon-played, .ratingbutton-icon-withrating {color: #00a4dc;}
+  
+  /*Banner transparency and larger font, adjust both "size-adjust" and "size" to modify font size*/
+  .skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred {background:none; background-color:rgba(0, 0, 0, 0);}
+  .skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.noHomeButtonHeader {background:none; background-color: rgba(0, 0, 0, 0);}
+  .headerTabs.sectionTabs {text-size-adjust: 110%;  font-size: 110%;}
+  .pageTitle {margin-top: auto; margin-bottom: auto;}
+  .emby-tab-button {padding: 1.75em 1.7em;}
+  
+  /*login page */
+  /*Narrow the login form, size according to display size (bigger on mobile)*/
+  #loginPage .readOnlyContent, #loginPage form {max-width: 22em;}
+  
+  /*Hide "please login" text, margin is to prevent login form moving too far up*/
+  #loginPage h1 {display: none}
+  #loginPage .padded-left.padded-right.padded-bottom-page {margin-top: 50px}
+  
+  /*Hide "manual" and "forgot" buttons*/
+  #loginPage .raised.cancel.block.btnManual.emby-button {display: none}
+  #loginPage .raised.cancel.block.btnForgotPassword.emby-button {display: none}
+  #loginPage .raised.cancel.block.btnQuick.emby-button {display: none}
+  
+  /*Login background*/
+  #loginPage {background: url(https://i.imgur.com/Xuecxwu.jpg) !important; background-size: cover !important;}
+  
+  /*Rounded corners and square hover buttons*/
+  .cardContent-button, 
+  .cardContent-shadow, 
+  .itemDetailImage, 
+  .cardOverlayButton-hover, 
+  .cardOverlayContainer,
+  .cardImageContainer,
+  .cardPadder,
+  .listItemImage,
+  .listItemImageButton,
+  .listItemButton,
+  .headerButton,
+  .paper-icon-button-light,
+  .innerCardFooter,
+  .blurhash-canvas,
+  .actionSheetMenuItem:hover,
+  .dialog
+  {border-radius: 6px !important;}
+  
+  /*Minimalistic play buttons*/
+  .cardOverlayFab-primary {background-color: #00000000;}
+  .cardOverlayButtonIcon {background-color: #00000000 !important;}
+  .cardOverlayContainer {background-color: rgba(0, 0, 0, 0.7);}
+  
+  /*Make watched icon dark and transparent*/
+  .playedIndicator {background: #00000058; box-shadow: none;}
+  .countIndicator {box-shadow: none;}
+  
+  /*Size episode preview images in a more compact way*/
+  .listItemImageButton-icon {padding: 0;}
+  .listItemImage.listItemImage-large.itemAction.lazy {height: 110px;}
+  .listItem-content {height: 115px;}
+  .secondary.listItem-overview.listItemBodyText {height: 61px; margin: 0;}
+  .listItemImageButton {margin: auto; font-size: 1.6em !important;}
+  
+  /*Tweak series/movie/album title screen*/
+  .detailLogo {display: none;}
+  .detailPagePrimaryContainer {background: rgba(0,0,0,0) !important;}
+  @media all and (min-width: 100em){
+      .itemBackdrop::after {background-color: rgba(0, 0, 0, 0) !important;}
+      .itemBackdrop {height: 23vh !important; background-image: none !important;}
+  }
+  @media all and (min-width: 32em) and (max-width: 100em){
+      .itemBackdrop::after {background-color: rgba(0, 0, 0, 0) !important;}
+      .itemBackdrop {height: 10em !important; background-image: none !important;}
+  }
+  @media all and (max-width: 32em) {
+      .itemBackdrop {width: 100vw !important; height: 100vh !important; position: fixed; filter: brightness(14%);}
+      .detailPageWrapperContainer {margin-top: 5em;}
+  }
+  
+  /*Theme some dialogues*/
+  .dialog {background-color: rgba(0, 0, 0, 0.9);}
+  .actionSheetMenuItem:hover {background-color: rgba(0, 164, 220, 0.2);}
+  .mainDrawer {background-color: rgba(0, 0, 0, 0.9);}
+  .navMenuOption:hover {background: rgba(0, 164, 220, 0.2);}
+  
