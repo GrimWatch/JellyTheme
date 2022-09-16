@@ -577,14 +577,6 @@ content:"Split"
 content:"More"
 }
 
-.layout-mobile #itemDetailPage .detailButton {
-background:#101010;
-flex-flow:revert;
-grid-gap:6px;
-justify-content:flex-start;
-width:calc(50% - 5px)
-}
-
 .layout-mobile .primaryImageWrapper > img {
 -o-object-fit:cover;
 -webkit-filter:brightness(65%);
